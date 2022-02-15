@@ -1,0 +1,57 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Electron Demo</title>
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+  <div class="container">
+
+    <h3>Add a person:</h3>
+    <div class="row">
+      <div class="five columns">
+        <label for="fullname">Full Name</label>
+        <input class="u-full-width" placeholder="G10" id="fullname" type="text">
+      </div>
+      <div class="five columns">
+        <label for="email">Email</label>
+        <input class="u-full-width" placeholder="xyz@gmail.com" id="email" type="email">
+      </div>
+      <div class="five columns">
+        <label for="contact">Contact</label>
+        <input class="u-full-width" placeholder="(123)-(456)-(7890)" id="contact" type="tel">
+      </div>
+        <div class="two columns">
+        <label for="add" class="invisible">x</label>
+        <input class="button-primary" value="Add" id="add" type="button">
+      </div>
+    </div>
+
+    <h3>All persons:</h3>
+    <table class="u-full-width">
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody id="tablebody">
+      </tbody>
+    </table>
+  </div>
+
+  <script type="text/javascript">
+    var remote = require('electron').remote;
+    document.addEventListener('keydown', function (e) {
+      if (e.which === 123) {
+        remote.getCurrentWindow().webContents.openDevTools();
+      } else if (e.which === 116) {
+        location.reload();
+      }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+.invisible {
+  visibility: hidden;
+}
+
+h3 {
+  margin-top: 2rem;
+}
+
+input[type="button"] {
+  margin-bottom: 0;
+}
+::placeholder{
+  background-color: #e6fac6;
+}
+body {
+  background-image: url('../ejs1.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+label{
+  color: white;
+}
+h3{
+  color: rgb(8, 242, 250);
+}
+tr{
+  color: white;
+}
+th{
+  color: rgb(247, 152, 218);
+}
+p{
+  color:yellow;
+}
